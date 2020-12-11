@@ -37,7 +37,10 @@
         "laravel": {
             "providers": [
                 "Notification\\notificationServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "NotificationModule": "Notification\\facade\\notificationFacade"
+            }
         }
     }
 }
