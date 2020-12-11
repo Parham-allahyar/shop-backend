@@ -1,0 +1,43 @@
+{
+    "name": "shop/notification",
+    "description": "",
+    "keywords": [
+        "laravel",
+        "laravel-package",
+        "PHP",
+        "laravel"
+    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "parham allahyar",
+        "email": "parhamallahyar70@gmail.com"
+    }],
+    "require": {
+        "php": "^7.1.3|7.2.*|7.3.*|7.4.*",
+        "ghasedak/php": "^1.0"
+        
+       
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Notification\\": "src/"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0",
+        "mockery/mockery": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Notification\\": "src/"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Notification\\notificationServiceProvider"
+            ]
+        }
+    }
+}
