@@ -19,6 +19,6 @@ class notificationServiceProvider extends ServiceProvider
 
 
         $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-        $loader->alias('NotificationFacade', 'Notification\Facades\Notificationtest');
+        $loader->alias('notificationFacade', 'Notification\Facades\notificationFacade');
     }
 }
