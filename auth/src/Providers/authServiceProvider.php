@@ -7,6 +7,7 @@ namespace AdminAuth\Providers;
 use Illuminate\Support\ServiceProvider;
 
 use Auth\Repositories\UserRepository;
+use Auth\implement\storeCode;
 class AuthServiceProvider extends ServiceProvider
 {
 
@@ -27,6 +28,12 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->app->bind('userProviderFacade', function () {
             return new UserRepository();
+        });
+    }
+    public function storeCode()
+    {
+        $this->app->bind('storeCodeFacade', function () {
+            return new storeCode();
         });
     }
 
