@@ -6,6 +6,7 @@ namespace Auth\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth\Facades\userProviderFacade;
+use Auth\Facades\storeCodeFacade;
 
 class AuthController extends Controller
 {
@@ -29,7 +30,13 @@ class AuthController extends Controller
             userProviderFacade::createUser($phoneNumber);
             $user = userProviderFacade::getUserByPhoneNumber($phoneNumber);
         }
-        
+
+        //Generate Verification Code
+        $code = random_int(100000, 999999);
+
+        // Cache Verification Code
+        storeCodeFacade::saveCode($code, $user->id);
+
         
     }
     
