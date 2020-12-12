@@ -1,6 +1,6 @@
 <?php
 
-namespace AdminAuth\Facades;
+namespace Auth\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

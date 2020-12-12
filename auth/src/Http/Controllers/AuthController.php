@@ -5,7 +5,7 @@ namespace Auth\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Auth\Facades\userProviderFacade;
 
 class AuthController extends Controller
 {
@@ -19,6 +19,9 @@ class AuthController extends Controller
             'phoneNumber' => 'required|unique:users,phone_Number|digits:11',
         ]);
         
+        //Find User
+        $user = userProviderFacade::getUserByPhoneNumber($validated);
+
         
     }
     
