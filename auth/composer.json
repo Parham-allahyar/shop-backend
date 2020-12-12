@@ -20,7 +20,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "AdminAuth\\": "src/"
+            "Auth\\": "src/"
         }
     },
     "require-dev": {
@@ -28,14 +28,14 @@
     },
     "autoload": {
         "psr-4": {
-            "AdminAuth\\": "src/"
+            "Auth\\": "src/"
         }
     },
 
     "extra": {
         "laravel": {
             "providers": [
-                "AdminAuth\\Providers\\authServiceProvider"
+                "Auth\\Providers\\authServiceProvider"
             ]
         }
     }
