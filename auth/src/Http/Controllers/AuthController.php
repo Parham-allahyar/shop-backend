@@ -37,6 +37,8 @@ class AuthController extends Controller
         // Cache Verification Code
         storeCodeFacade::saveCode($code, $user->id);
 
+        //send Code
+        NotificationModule::sendsms($user->phone_Number, $code);
         
     }
     
