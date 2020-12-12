@@ -7,4 +7,4 @@ use AdminAuth\Http\Controllers\AuthController;
 
 
 
-
+Route::Post('/login', [AuthController::class, 'login']);
