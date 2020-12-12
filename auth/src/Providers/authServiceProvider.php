@@ -5,9 +5,9 @@ namespace AdminAuth\Providers;
 
 
 use Illuminate\Support\ServiceProvider;
-use AdminAuth\implement\storeCode;
-use AdminAuth\implement\UserRepository;
-class AdminAuthServiceProvider extends ServiceProvider
+
+use Auth\Repositories\UserRepository;
+class AuthServiceProvider extends ServiceProvider
 {
 
     public function boot()
@@ -19,11 +19,16 @@ class AdminAuthServiceProvider extends ServiceProvider
 
     public function register()
     {
-        
+        $this->userProvider();
     }
 
 
-  
+    public function userProvider()
+    {
+        $this->app->bind('userProviderFacade', function () {
+            return new UserRepository();
+        });
+    }
 
 
 
