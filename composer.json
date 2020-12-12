@@ -11,6 +11,10 @@
         {
             "type": "path",
             "url": "./notification"
+        },
+        {
+            "type": "path",
+            "url": "./auth"
         }
     ],
     "require": {
