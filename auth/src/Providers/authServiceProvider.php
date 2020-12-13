@@ -1,6 +1,6 @@
 <?php
 
-namespace AdminAuth\Providers;
+namespace Auth\Providers;
 
 
 
@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider;
 
 use Auth\Repositories\UserRepository;
 use Auth\implement\storeCode;
-class AuthServiceProvider extends ServiceProvider
+class authServiceProvider extends ServiceProvider
 {
 
     public function boot()
@@ -21,6 +21,7 @@ class AuthServiceProvider extends ServiceProvider
     public function register()
     {
         $this->userProvider();
+        $this->storeCode();
     }
 
 

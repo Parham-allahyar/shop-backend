@@ -24,6 +24,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
+        "shop/auth": "dev-auth",
         "shop/notification": "dev-notification",
         "tymon/jwt-auth": "^1.0"
     },

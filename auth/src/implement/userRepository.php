@@ -1,6 +1,6 @@
 <?php
 
-namespace AdminAuth\implement;
+namespace Auth\implement;
 
 use App\Models\User;
 

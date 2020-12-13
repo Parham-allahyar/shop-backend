@@ -10,6 +10,7 @@ use Auth\Facades\storeCodeFacade;
 use Carbon\Carbon;
 use App\Models\User;
 use Tymon\JWTAuth\Facades\JWTAuth;
+use Notification\Facade\notificationFacade;
 use Tymon\JWTAuth\Exceptions\JWTException;
 class AuthController extends Controller
 {
@@ -20,16 +21,14 @@ class AuthController extends Controller
 
         //Validation Phone Number
         $validated = $request->validate([
-            'phoneNumber' => 'required|unique:users,phone_Number|digits:11',
+            'phoneNumber' => 'required',
         ]);
-        
+     
         //Find User
         $user = userProviderFacade::getUserByPhoneNumber($validated);
     
         // OR Create User
-
         if (is_null($user)) {
-
             userProviderFacade::createUser($phoneNumber);
             $user = userProviderFacade::getUserByPhoneNumber($phoneNumber);
         }
@@ -41,8 +40,9 @@ class AuthController extends Controller
         storeCodeFacade::saveCode($code, $user->id);
 
         //send Code
-        NotificationModule::sendsms($user->phone_Number, $code);
-        
+       // notificationFacade::sendsms($user->phone_Number, $code);
+      
+        return $code;
     }
 
 
@@ -66,7 +66,7 @@ class AuthController extends Controller
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
-            'expires_in' => auth()->Carbon::now()->subDays(30)
+            //'expires_in' => auth()->Carbon::now()->subDays(30)
         ]);
     }
     

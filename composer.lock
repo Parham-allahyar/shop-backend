@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8452cba683e96122c92e29bb5b8202db",
+    "content-hash": "e68593edf7b03925e839622aee00647a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2533,6 +2533,54 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "shop/auth",
+            "version": "dev-auth",
+            "dist": {
+                "type": "path",
+                "url": "./auth",
+                "reference": "0f8ed2ac2057e2eaab8ce6f7fc35decf85d2caf6"
+            },
+            "require": {
+                "php": "^7.1.3|7.2.*|7.3.*|7.4.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Auth\\Providers\\authServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Auth\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Auth\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "parham allahyar",
+                    "email": "parhamallahyar70@gmail.com"
+                }
+            ],
+            "keywords": [
+                "PHP",
+                "laravel",
+                "laravel",
+                "laravel-package"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "shop/notification",
@@ -7732,6 +7780,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "shop/auth": 20,
         "shop/notification": 20
     },
     "prefer-stable": true,
