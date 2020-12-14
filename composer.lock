@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e68593edf7b03925e839622aee00647a",
+    "content-hash": "f0c510f12c96fddaf49d0b65f78241b6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2617,6 +2617,54 @@
             "autoload-dev": {
                 "psr-4": {
                     "Notification\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "parham allahyar",
+                    "email": "parhamallahyar70@gmail.com"
+                }
+            ],
+            "keywords": [
+                "PHP",
+                "laravel",
+                "laravel",
+                "laravel-package"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "shop/uploadfile",
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "./uploadfile",
+                "reference": "177d4cd4d8ab6f0333ad6653ce3b9aecbca592a3"
+            },
+            "require": {
+                "php": "^7.1.3|7.2.*|7.3.*|7.4.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Uploadfile\\Providers\\uploadfileServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Uploadfile\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Uploadfile\\": "src/"
                 }
             },
             "license": [
@@ -7781,7 +7829,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "shop/auth": 20,
-        "shop/notification": 20
+        "shop/notification": 20,
+        "shop/uploadfile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

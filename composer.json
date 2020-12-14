@@ -30,6 +30,7 @@
         "laravel/tinker": "^2.5",
         "shop/auth": "dev-auth",
         "shop/notification": "dev-notification",
+        "shop/uploadfile": "dev-develop",
         "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
