@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e68593edf7b03925e839622aee00647a",
+    "content-hash": "805dafaaba23e07a53eba3ede54ea723",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2561,6 +2561,54 @@
             "autoload-dev": {
                 "psr-4": {
                     "Auth\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "parham allahyar",
+                    "email": "parhamallahyar70@gmail.com"
+                }
+            ],
+            "keywords": [
+                "PHP",
+                "laravel",
+                "laravel",
+                "laravel-package"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "shop/category",
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "./category",
+                "reference": "618340ab7d2253c1a2199f0ec217ad53771390ef"
+            },
+            "require": {
+                "php": "^7.1.3|7.2.*|7.3.*|7.4.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Category\\Providers\\CategoryServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Category\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Category\\": "src/"
                 }
             },
             "license": [
@@ -7781,6 +7829,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "shop/auth": 20,
+        "shop/category": 20,
         "shop/notification": 20
     },
     "prefer-stable": true,

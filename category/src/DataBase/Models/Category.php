@@ -6,14 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    public function child()
+
+    protected $fillable = ['name','parent_id'];
+    
+    public function childs()
     {
-        return $this->hasMany(Category::class, 'parent_id', 'id');
+        return $this->hasMany(Category::class, 'parent_id', 'id')->with('childs');
+    }
+    public function parent()
+    {
+        return $this->belongsTo('Category', 'parent_id');
     }
 
-
-    public function Categoryable()
-    {
-        return $this->morphTo();
-    }
 }
