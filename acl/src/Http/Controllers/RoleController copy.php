@@ -20,5 +20,20 @@ class RoleController extends Controller
         }
         $roles = $roles->latest()->paginate(20);
     }
+
+
+    public function store(Request $request)
+    {
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:255', 'unique:roles'],
+            'label' => ['required', 'string', 'max:255'],
+            'permissions' => ['required' , 'array']
+        ]);
+
+
+        $role = Role::create($data);
+        $role->permissions()->sync($data['permissions']);
+
+    }
    
 }
