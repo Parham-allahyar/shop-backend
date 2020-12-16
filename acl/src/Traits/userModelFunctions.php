@@ -2,9 +2,6 @@
 namespace ACL\Traits;
 trait userModelFunctions
 {
-
-
-
     public function hasRole($roles)
     {
         return !! $roles->intersect($this->roles)->all();
@@ -14,7 +11,4 @@ trait userModelFunctions
     {
         return $this->permissions->contains('name' , $permission->name) || $this->hasRole($permission->roles);
     }
-
-
-
 }

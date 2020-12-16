@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use ACL\Traits\authProviderFunction;
-
+use ACL\DataBase\Models\Permission;
 class AuthServiceProvider extends ServiceProvider
 {
     use authProviderFunction;
@@ -18,7 +18,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+       
         //authProviderFunction Trait
-        $this->validate();
+         $this->validate();
     }
 }

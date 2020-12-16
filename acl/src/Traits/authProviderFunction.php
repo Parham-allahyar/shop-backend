@@ -2,7 +2,7 @@
 
 namespace ACL\Traits;
 
-use ACL\Models\Permission;
+use ACL\DataBase\Models\Permission;
 use Illuminate\Support\Facades\Gate;
 
 trait authProviderFunction

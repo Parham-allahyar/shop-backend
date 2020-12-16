@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "805dafaaba23e07a53eba3ede54ea723",
+    "content-hash": "48907fa8be1f5503659d18afcf3a2f7a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2533,6 +2533,54 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "shop/acl",
+            "version": "dev-acl",
+            "dist": {
+                "type": "path",
+                "url": "./acl",
+                "reference": "fc4fd16bde7d570bcc899cbd0fd1473ff8c76050"
+            },
+            "require": {
+                "php": "^7.1.3|7.2.*|7.3.*|7.4.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ACL\\Providers\\AclServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ACL\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "ACL\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "parham allahyar",
+                    "email": "parhamallahyar70@gmail.com"
+                }
+            ],
+            "keywords": [
+                "PHP",
+                "laravel",
+                "laravel",
+                "laravel-package"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "shop/auth",
@@ -7828,6 +7876,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "shop/acl": 20,
         "shop/auth": 20,
         "shop/category": 20,
         "shop/notification": 20
