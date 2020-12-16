@@ -33,5 +33,16 @@ class PermissionController extends Controller
 
     }
 
+    public function update(Request $request, Permission $permission)
+    {
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:255' ],
+            'label' => ['required', 'string',  'max:255'],
+        ]);
+
+        $permission->update($data);
+
+    }
+
    
 }
