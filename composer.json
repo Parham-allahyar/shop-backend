@@ -34,6 +34,7 @@
         "laravel/tinker": "^2.5",
         "shop/auth": "dev-auth",
         "shop/category": "dev-develop",
+        "shop/comment": "dev-develop",
         "shop/notification": "dev-notification",
         "tymon/jwt-auth": "^1.0"
     },
