@@ -35,5 +35,24 @@ class RoleController extends Controller
         $role->permissions()->sync($data['permissions']);
 
     }
+
+    public function update(Request $request, Role $role)
+    {
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:255' , Rule::unique('roles')->ignore($role->id)],
+            'label' => ['required', 'string',  'max:255'],
+            'permissions' => ['required' , 'array']
+        ]);
+
+        $role->update($data);
+        $role->permissions()->sync($data['permissions']);
+
+    }
+
+
+
+
+
+
    
 }
