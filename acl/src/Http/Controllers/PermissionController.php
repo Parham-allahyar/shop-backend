@@ -21,5 +21,17 @@ class PermissionController extends Controller
       $permissions = $permissions->latest()->paginate(20);
   }
 
+
+  public function store(Request $request)
+    {
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:255', 'unique:permissions'],
+            'label' => ['required', 'string', 'max:255'],
+        ]);
+
+        Permission::create($data);
+
+    }
+
    
 }
